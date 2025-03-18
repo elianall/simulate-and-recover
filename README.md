@@ -12,7 +12,7 @@ This repository implements a simulation exercise using the EZ diffusion model—
   - **test_ez_diffusion.py**: Unit tests for the EZ diffusion functions.
   - **test.sh**: A bash script to run the test suite.
 
-NOTE: Assignment is written with assistance of ChatGPT, prompted to write a simulate and recover program for the EZ diffusion model using unit tests to define the EZ Diffusion model. 
+NOTE: Assignment is written with assistance of ChatGPT, prompted to write a simulate and recover program for the EZ diffusion model using unit tests. 
 
 ## How to Run
 To run simulation, execute from repository root:

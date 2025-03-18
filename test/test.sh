@@ -11,4 +11,3 @@ else
     exit 1
 fi
 
-chmod +x test/test.sh

@@ -1,5 +1,3 @@
-#Written with assistance of ChatGPT
-
 import math
 import random
 

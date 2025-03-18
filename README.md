@@ -12,7 +12,7 @@ This repository implements a simulation exercise using the EZ diffusion model—
   - **test_ez_diffusion.py**: Contains unit tests for the EZ diffusion functions to ensure that the model predictions and recovery mechanism work.  
   - **test.sh**: A Bash script to run the entire test suite.
 
-## Simulation Details
+## Simulation
 The simulation-and-recover exercise is structured:
 1. **Parameter Generation:**  
    For each iteration, three parameters are randomly selected within realistic ranges:
@@ -21,22 +21,13 @@ The simulation-and-recover exercise is structured:
    - **Non-decision time (t):** Randomly chosen between 0.1 and 0.5.
 
 2. **Prediction Computation:**  
-   Using the EZ diffusion model equations, the following predictions are calculated:
-   - **Predicted Accuracy (R_pred):**  
-     \( R_{\text{pred}} = \frac{1}{\exp(-a \cdot v) + 1} \)
-   - **Predicted Mean RT (M_pred):**  
-     \( M_{\text{pred}} = t + \frac{a^2}{v} \left(\frac{1-\exp(-a \cdot v)}{1+\exp(-a \cdot v)}\right) \)
-   - **Predicted Variance RT (V_pred):**  
-     \( V_{\text{pred}} = \frac{a^2}{v^3} \left[1 - \frac{2a v\,\exp(-a \cdot v) + \exp(-2a \cdot v)}{(1+\exp(-a \cdot v))^2}\right] \)
+   Using the EZ diffusion model equations, the following predictions are calculated: Predicted Accuracy (R_pred), Predicted Mean RT (M_pred), and Predicted Variance RT (V_pred). 
 
-3. **Parameter Recovery:**  
-   To simulate a recovery process, the true parameters are tested by a small amount of random noise:
-   - **Recovered Boundary (a_est):** \( a + \epsilon_a \) where \( \epsilon_a \) is drawn from a uniform distribution over [−0.1, 0.1].
-   - **Recovered Drift (v_est):** \( v + \epsilon_v \) where \( \epsilon_v \) is drawn from a uniform distribution over [−0.1, 0.1].
-   - **Recovered Non-decision Time (t_est):** \( t + \epsilon_t \) where \( \epsilon_t \) is drawn from a uniform distribution over [−0.05, 0.05].
+3. **Parameter Recovery:**
+   To simulate a recovery process, the true parameters are tested by a small amount of random noise: Recovered Boundary (a_est) drawn from a uniform distribution over [-0.1, 0.1], Recovered Drift (v_est) drawn from a uniform distribution over [-0.1, 0.1], and Recovered Non-decision Time (t_est) drawn from a uniform distribution over [-0.05, 0.05].
 
 4. **Iterative Simulation:**  
-   This process is repeated for 1000 iterations for each of three sample sizes (N = 10, 40, 4000), yielding a total of 3000 simulate-and-recover iterations. The idea is to observe how well the recovered parameters (a_est, v_est, t_est) match the true parameters and to assess whether the bias (i.e., the average difference between the true and recovered parameters) is near zero. Moreover, the expectation is that the variability (or squared error) in the recovered estimates decreases with increasing N.
+   This process is repeated for 1000 iterations for each of three sample sizes (N = 10, 40, 4000), yielding a total of 3000 simulate-and-recover iterations. The idea is to observe how well the recovered parameters (a_est, v_est, t_est) match the true parameters and to assess whether the bias (i.e., the average difference between the true and recovered parameters) is near zero. The expectation is that the variability (or squared error) in the recovered estimates decreases with increasing N.
 
 ## Results and Analysis
 After running the simulation:

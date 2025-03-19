@@ -1,9 +1,7 @@
 # simulate-and-recover
 
-## Overview
-This repository implements a simulation exercise using the EZ diffusion model—a widely used model in cognitive psychology to describe decision-making processes. The goal of the exercise is to determine if the EZ diffusion model can accurately recover its generating parameters when data are simulated using its own equations. This kind of consistency check is fundamental in cognitive modeling, as it establishes whether the model can be trusted to infer underlying parameters from experimental data.
+This repository implements a simulation exercise using the EZ diffusion model—a model used to describe decision-making processes by analyzing response time and accuracy data. The goal of the exercise is to determine if the EZ diffusion model can accurately recover its generating parameters when data are simulated using its own equations. This kind of consistency check is important in cognitive modeling, as it establishes whether the model can be trusted to infer underlying parameters from experimental data.
 
-## Repository Structure
 - **src/**  
   - **ez_diffusion.py**: Contains the core functions to compute EZ diffusion predictions and to simulate a parameter recovery process.  
   - **simulate.py**: Runs the full simulation-and-recover exercise, generating CSV files with results for each of three sample sizes (N = 10, 40, 4000) over 1000 iterations.  
@@ -47,7 +45,7 @@ The results of the simulate-and-recover exercise indicate that, under idealized 
 - **Improved Precision with Larger Data Sets:** The recovery precision (as measured by the squared error) improves significantly with larger sample sizes.
 - **Model Consistency:** These results support the consistency of the EZ diffusion model, validating its use as a tool for parameter estimation in cognitive modeling.
 
-## How to Run the Simulation and Tests
+## How to Run
 - **Simulation Exercise:**  
   From the repository root, run:
   ```bash
@@ -60,4 +58,4 @@ The results of the simulate-and-recover exercise indicate that, under idealized 
   ./test/test.sh
   ```
 
-NOTE: The files in this repository were written with the assistance of ChatGPT, prompted to write a simulate-and-recover program for the EZ diffusion model using unit tests and considering the assignment criteria.
+NOTE: The files and scripts in this repository were written with the assistance of ChatGPT, prompted to write a simulate-and-recover program for the EZ diffusion model using unit tests and considering the assignment criteria.

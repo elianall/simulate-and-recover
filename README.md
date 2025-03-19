@@ -1,6 +1,6 @@
 # simulate-and-recover
 
-This repository implements a simulation exercise using the EZ diffusion model—a model used to describe decision-making processes by analyzing response time and accuracy data. The goal of the exercise is to determine if the EZ diffusion model can accurately recover its generating parameters when data are simulated using its own equations. This kind of consistency check is important in cognitive modeling, as it establishes whether the model can be trusted to infer underlying parameters from experimental data.
+This repository runs a simulation exercise using the EZ diffusion model—a model used to describe decision-making processes by analyzing response time and accuracy data. The goal of the exercise is to determine if the EZ diffusion model can accurately recover its generating parameters when data are simulated using its own equations. This kind of consistency check is important in cognitive modeling, as it establishes whether the model can be trusted to infer underlying parameters from experimental data.
 
 - **src/**  
   - **ez_diffusion.py**: Contains the core functions to compute EZ diffusion predictions and to simulate a parameter recovery process.  
